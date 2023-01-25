@@ -19,7 +19,12 @@ export class App extends Component {
     bad: 0,
   };
 
-  handleClick = () => {};
+  handleClick = evt => {
+    const targetName = evt.currentTarget.name;
+    this.setState(prevState => ({
+      [targetName]: prevState[targetName] + 1,
+    }));
+  };
 
   countTotalFeedback = () => {
     const { good, neutral, bad } = this.state;

@@ -29,11 +29,9 @@ export class FeedbackOptions extends Component {
           return (
             <button
               key={index}
+              name={option}
               className={this.makeOptionClassName(index)}
-              onClick={() => {
-                this.setActiveIdx(index);
-                onLeaveFeedback(option);
-              }}
+              onClick={onLeaveFeedback}
             >
               {option}
             </button>
