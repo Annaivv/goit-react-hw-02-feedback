@@ -7,6 +7,12 @@ class Feedback extends React.Component {
     bad: 0,
   };
 
+  handleClick = feedback => {
+    this.setState(prevState => ({
+      feedback: prevState.feedback + 1,
+    }));
+  };
+
   handleGood = () => {
     this.setState(prevState => ({
       good: prevState.good + 1,
@@ -46,13 +52,13 @@ class Feedback extends React.Component {
     return (
       <div>
         <div>
-          <button type="button" onClick={this.handleGood}>
+          <button type="button" onClick={this.handleClick(good)}>
             Good
           </button>
-          <button type="button" onClick={this.handleNeutral}>
+          <button type="button" onClick={this.handleClick(neutral)}>
             Neutral
           </button>
-          <button type="button" onClick={this.handleBad}>
+          <button type="button" onClick={this.handleClick(bad)}>
             Bad
           </button>
         </div>
