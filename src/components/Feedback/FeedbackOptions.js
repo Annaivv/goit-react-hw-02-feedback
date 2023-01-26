@@ -30,7 +30,10 @@ export class FeedbackOptions extends Component {
               key={index}
               name={option}
               className={this.makeOptionClassName(index)}
-              onClick={(onLeaveFeedback, () => this.setActiveIdx(index))}
+              onClick={evt => {
+                this.setActiveIdx(index);
+                onLeaveFeedback(evt);
+              }}
             >
               {option}
             </button>
