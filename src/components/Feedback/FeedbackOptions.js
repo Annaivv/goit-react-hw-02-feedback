@@ -20,7 +20,6 @@ export class FeedbackOptions extends Component {
   };
 
   render() {
-    const { activeOptionIdx } = this.state;
     const { options, onLeaveFeedback } = this.props;
 
     return (
@@ -31,7 +30,7 @@ export class FeedbackOptions extends Component {
               key={index}
               name={option}
               className={this.makeOptionClassName(index)}
-              onClick={onLeaveFeedback}
+              onClick={(onLeaveFeedback, () => this.setActiveIdx(index))}
             >
               {option}
             </button>
