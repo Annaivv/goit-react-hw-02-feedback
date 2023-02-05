@@ -1,5 +1,4 @@
 import './index.css';
-// import Feedback from './Feedback/Feedback';
 import { Layout } from './components/Layout';
 import { Component } from 'react';
 import FeedbackOptions from './components/Feedback/FeedbackOptions';
@@ -69,21 +68,3 @@ export class App extends Component {
     );
   }
 }
-
-// handleGood = () => {
-//   this.setState(prevState => ({
-//     good: prevState.good + 1,
-//   }));
-// };
-
-// handleNeutral = () => {
-//   this.setState(prevState => ({
-//     neutral: prevState.neutral + 1,
-//   }));
-// };
-
-// handleBad = () => {
-//   this.setState(prevState => ({
-//     bad: prevState.bad + 1,
-//   }));
-// };
